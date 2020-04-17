@@ -1,0 +1,12 @@
+html {
+  color : rgb(26, 26, 26);
+}
+body {
+  font-family: "Roboto";
+  background: #1c1b1b;
+}
+
+.btn {
+  background-color: rgba(0, 255, 128, 0.71);
+  color: white;
+}
