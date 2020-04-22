@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Overview1_stylesheet.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- nalika Icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/nalika-icon.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="bulma-0.8.0/css/bulma.css">
+    <script defer src="fontawesome-free-5.13.0-web/js/all.js"></script>
+    <!-- <link rel="stylesheet" href="debug.css"> -->
+    <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+</head>
+<body>
+<!--Navigation pills-->
+<section class="hero">
+	<div class="hero-body d-flex justify-content-center">
+		<div class="btn-group btn-group-md">
+      <a href="Control1.html" class="btn btn-success">Control</a>               <!--Insert link of the other page-->
+      <a href="Overview1.html" class="btn btn-success">Overview</a>
+      <a href="#" class="btn btn-success">Details</a>
+    </div>
+	</div>
+</section>
+<!--End navigation pills-->
+
+
+<div class="container pb-xl-5">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">All</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Single slot</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a></div>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="container">
+<div class="navbar"><span>CPU Usage</span></div>
+    <div class="wrapper">
+        <div id="chart"></div>
+        <script>
+            function getData() {
+                return Math.random();
+            }
+            Plotly.plot('chart',[{
+                y:[getData()],
+                type:'line'
+
+            }]);
+
+            var cnt = 0;
+            setInterval(function(){
+                Plotly.extendTraces('chart',{ y:[[getData()]]}, [0]);
+                cnt++;
+                if(cnt > 500) {
+                    Plotly.relayout('chart',{
+                        xaxis: {
+                            range: [cnt-500,cnt]
+                        }
+                    });
+                }
+            },15);
+        </script>
+    </div>
+  </div>
+
+
+</body>
+</html>

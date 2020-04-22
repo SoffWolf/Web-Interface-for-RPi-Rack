@@ -10,11 +10,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="Overview1_stylesheet.css">
-      <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Bootstrap CSS
 		============================================ -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
-	<!-- nalika Icon CSS
+	  <!-- nalika Icon CSS
 		============================================ -->
     <link rel="stylesheet" href="css/nalika-icon.css">
     <!-- owl.carousel CSS
@@ -57,97 +57,131 @@
     <!-- modernizr JS
 		============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="bulma-0.8.0/css/bulma.css">
+    <script defer src="fontawesome-free-5.13.0-web/js/all.js"></script>
+    <!-- <link rel="stylesheet" href="debug.css"> -->
 </head>
 
 
 <body>
 <!--Navigation pills-->
-<div class="d-flex justify-content-center p-3">
-<div class="btn-group btn-group-sm">
-  <a href="#" class="btn ">Control</a>               <!--Insert link of the other page-->
-  <a href="#" class="btn btn-success active">Overview</a>
-  <a href="#" class="btn ">Resource</a>
-</div>
-</div>
-<!--End navigation pills-->
-
-<div class="col-lg-7 col-md-5">
-                            <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
-                                <h4 class="text-left text-uppercase"><b>CPU Power</b></h4>
-                                <div class="row vertical-center-box vertical-center-box-tablet">
-                                    <div class="col-xs-3 mar-bot-15 text-left">
-                                        <label class="label bg-green">61%</label>
-                                    </div>
-                                    <div class="col-xs-9 cus-gh-hd-pro">
-                                        <h2 class="text-right no-margin">2.3/3.8 GHz</h2>
-                                    </div>
-                                </div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 60%;" class="progress-bar bg-green"></div>
-                                </div>
-                            </div>
-
-                            <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
-                                <h4 class="text-left text-uppercase"><b>RAM</b></h4>
-                                <div class="row vertical-center-box vertical-center-box-tablet">
-                                    <div class="col-xs-3 mar-bot-15 text-left">
-                                        <label class="label bg-green">46%</label>
-                                    </div>
-                                    <div class="col-xs-9 cus-gh-hd-pro">
-                                        <h2 class="text-right no-margin">3.3/7.2 GB</h2>
-                                    </div>
-                                </div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 60%;" class="progress-bar bg-green"></div>
-                                </div>
-                            </div>
+  <section class="hero">
+    <div class="hero-body d-flex justify-content-center">
+      <div class="btn-group btn-group-md">
+        <a href="Control1.html" class="btn btn-success">Control</a>
+        <a href="Overview1.html" class="btn btn-success">Overview</a>
+        <a href="Details1.html" class="btn btn-success">Details</a>
+      </div>
+    </div>
+  </section>
 
 
 
-                            <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
-                                <h4 class="text-left text-uppercase"><b>GPU</b></h4>
-                                <div class="row vertical-center-box vertical-center-box-tablet">
-                                    <div class="col-xs-3 mar-bot-15 text-left">
-                                        <label class="label bg-green">23%</label>
-                                    </div>
-                                    <div class="col-xs-9 cus-gh-hd-pro">
-                                        <h2 class="text-right no-margin">1.5/6.5 GB</h2>
-                                    </div>
-                                </div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 60%;" class="progress-bar bg-green"></div>
-                                </div>
-                            </div>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
 
-                            <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
-                                <h4 class="text-left text-uppercase"><b>Power </b></h4>
-                                <div class="row vertical-center-box vertical-center-box-tablet">
-                                    <div class="col-xs-3 mar-bot-15 text-left">
-                                        <label class="label bg-green">61%</label>
-                                    </div>
-                                    <div class="col-xs-9 cus-gh-hd-pro">
-                                        <h2 class="text-right no-margin">2.3/3.8 GHz</h2>
-                                    </div>
-                                </div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 60%;" class="progress-bar bg-green"></div>
-                                </div>
-                            </div>
+        <!-- Pi selection buttons -->
+        <div class="column is-two-fifths">
+          <div class="btn-group-vertical btn-group-lg"style="width: 300px">
+            <a href="#" class="btn" title="Raspberry Pi 3" data-content="CPU: Quad Core 1.2GHz Broadcom BCM2837 64bit CPU/
+              RAM: 1GB/ Disk: 64 GB/ OS: Raspbian 10/ Kernel: ..." data-toggle="popover" data-placement="left" data-trigger="focus">Pi 3</a>
+            <a href="#" class="btn" title="Raspberry Pi 4" data-content="Content" data-toggle="popover" data-placement="left" data-trigger="focus">Pi 4</a>
+            <a href="#" class="btn" title="Raspberry Pi 3" data-content="Content" data-toggle="popover" data-placement="left" data-trigger="focus">Pi 3</a>
+            <a href="#" class="btn" title="Raspberry Pi 3" data-content="Content" data-toggle="popover" data-placement="left" data-trigger="focus">Pi 3</a>
+            <a href="#" class="btn text-muted" title="Raspberry Pi 3" data-content="Content" data-toggle="popover" data-placement="left" data-trigger="focus">Pi 4 (Off)</a>
+            <a href="#" class="btn" title="Raspberry Pi 4" data-content="Content" data-toggle="popover" data-placement="left" data-trigger="focus">Pi 4</a>
+            <a href="#" class="btn disabled" title="None" data-content="Content" data-toggle="popover" data-placement="left" data-trigger="focus">Empty</a>
+            <a href="#" class="btn disabled" title="None" data-content="Content" data-toggle="popover" data-placement="left" data-trigger="focus">Empty</a>
+          </div>
+        </div>
 
-                            <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
-                                <h4 class="text-left text-uppercase"><b>Fan</b></h4>
-                                <div class="row vertical-center-box vertical-center-box-tablet">
-                                    <div class="col-xs-3 mar-bot-15 text-left">
-                                        <label class="label bg-green">On%</label>
-                                    </div>
-                                    <div class="col-xs-9 cus-gh-hd-pro">
-                                        <h2 class="text-right no-margin">2.3/3.8 GHz</h2>
-                                    </div>
-                                </div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 60%;" class="progress-bar bg-green"></div>
-                                </div>
-                            </div>
-                        </div>
+        <!-- Information Pannel -->
+        <div class="column">
+          <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
+            <h4 class="text-left text-uppercase"><b>CPU Power</b></h4>
+            <div class="row vertical-center-box vertical-center-box-tablet">
+              <div class="col-xs-3 mar-bot-15 text-left">
+                <label class="label bg-green">61%</label>
+              </div>
+              <div class="col-xs-9 cus-gh-hd-pro">
+                <h2 class="text-right no-margin">2.3/3.8 GHz</h2>
+              </div>
+            </div>
+            <div class="progress progress-mini">
+              <div style="width: 60%;" class="progress-bar bg-green"></div>
+            </div>
+          </div>
+
+          <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
+            <h4 class="text-left text-uppercase"><b>RAM</b></h4>
+            <div class="row vertical-center-box vertical-center-box-tablet">
+              <div class="col-xs-3 mar-bot-15 text-left">
+                <label class="label bg-green">46%</label>
+              </div>
+              <div class="col-xs-9 cus-gh-hd-pro">
+                <h2 class="text-right no-margin">3.3/7.2 GB</h2>
+              </div>
+            </div>
+            <div class="progress progress-mini">
+              <div style="width: 46%;" class="progress-bar bg-green"></div>
+            </div>
+          </div>
+
+          <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
+            <h4 class="text-left text-uppercase"><b>GPU</b></h4>
+            <div class="row vertical-center-box vertical-center-box-tablet">
+              <div class="col-xs-3 mar-bot-15 text-left">
+                <label class="label bg-green">23%</label>
+              </div>
+              <div class="col-xs-9 cus-gh-hd-pro">
+                <h2 class="text-right no-margin">1.5/6.5 GB</h2>
+              </div>
+            </div>
+            <div class="progress progress-mini">
+              <div style="width: 23%;" class="progress-bar bg-green"></div>
+            </div>
+          </div>
+
+          <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
+            <h4 class="text-left text-uppercase"><b>Power</b></h4>
+            <div class="row vertical-center-box vertical-center-box-tablet">
+              <div class="col-xs-3 mar-bot-15 text-left">
+                <label class="label bg-green">66%</label>
+              </div>
+              <div class="col-xs-9 cus-gh-hd-pro">
+                <h2 class="text-right no-margin">50 W</h2>
+              </div>
+            </div>
+            <div class="progress progress-mini">
+              <div style="width: 66%;" class="progress-bar bg-green"></div>
+            </div>
+          </div>
+
+          <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
+            <h4 class="text-left text-uppercase"><b>Fan</b></h4>
+            <div class="row vertical-center-box vertical-center-box-tablet">
+              <div class="col-xs-3 mar-bot-15 text-left">
+                <label class="label bg-green">On</label>
+              </div>
+              <div class="col-xs-9 cus-gh-hd-pro">
+                <h2 class="text-right no-margin">15 RPS</h2>
+              </div>
+            </div>
+            <div class="progress progress-mini">
+              <div style="width: 80%;" class="progress-bar bg-green"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover();
+});
+</script>
 </body>
 </html>
