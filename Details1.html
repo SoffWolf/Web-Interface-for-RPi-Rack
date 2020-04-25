@@ -58,10 +58,9 @@
     <!-- modernizr JS
 		============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <link rel="stylesheet" href="bulma-0.8.0/css/bulma.css">
+    <link rel="stylesheet" href="bulma-0.8.2/css/bulma.css">
     <script defer src="fontawesome-free-5.13.0-web/js/all.js"></script>
     <!-- <link rel="stylesheet" href="debug.css"> -->
-    <!-- <link rel="stylesheet" href="styles/debug.css"> -->
 </head>
 <body>
 <!--Navigation pills-->
@@ -76,54 +75,54 @@
 </section>
 <!--End navigation pills-->
 
-
-<div class="container pb-xl-5">
-  <ul class="nav nav-pills">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">All</a>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Single slot</a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a></div>
-    </li>
-  </ul>
-</div>
-
-
-
-<div class="container">
-<div class="navbar"><span>CPU Usage</span></div>
-    <div class="wrapper">
-        <div id="chart"></div>
-        <script>
-            function getData() {
-                return Math.random();
-            }
-            Plotly.plot('chart',[{
-                y:[getData()],
-                type:'line'
-
-            }]);
-
-            var cnt = 0;
-            setInterval(function(){
-                Plotly.extendTraces('chart',{ y:[[getData()]]}, [0]);
-                cnt++;
-                if(cnt > 500) {
-                    Plotly.relayout('chart',{
-                        xaxis: {
-                            range: [cnt-500,cnt]
-                        }
-                    });
-                }
-            },15);
-        </script>
-    </div>
+<section class="section">
+  <div class="container pb-xl-5">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">All</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Single slot</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Link 1</a>
+          <a class="dropdown-item" href="#">Link 2</a>
+          <a class="dropdown-item" href="#">Link 3</a></div>
+      </li>
+    </ul>
   </div>
 
+
+
+  <div class="container">
+    <div class="navbar"><span>CPU Usage</span></div>
+    <div class="wrapper">
+      <div id="chart"></div>
+      <!-- <script>
+          function getData() {
+              return Math.random();
+          }
+          Plotly.plot('chart',[{
+              y:[getData()],
+              type:'line'
+
+          }]);
+
+          var cnt = 0;
+          setInterval(function(){
+              Plotly.extendTraces('chart',{ y:[[getData()]]}, [0]);
+              cnt++;
+              if(cnt > 500) {
+                  Plotly.relayout('chart',{
+                      xaxis: {
+                          range: [cnt-500,cnt]
+                      }
+                  });
+              }
+          },15);
+    </script> -->
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
