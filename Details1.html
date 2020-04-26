@@ -73,33 +73,40 @@
     </div>
 	</div>
 </section>
-<!--End navigation pills-->
 
+<!-- Control/Info Buttons -->
 <section class="section">
-  <div class="container pb-xl-5">
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">All</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Single slot</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Link 1</a>
-          <a class="dropdown-item" href="#">Link 2</a>
-          <a class="dropdown-item" href="#">Link 3</a></div>
-      </li>
-    </ul>
-  </div>
-
-
-
   <div class="container">
-    <div class="navbar"><span>CPU Usage</span></div>
+    <div class="buttons">
+      <button class="button is-primary is-outlined" href="#">All</a>
+      <button class="nav-link dropdown-toggle button is-primary is-outlined" data-toggle="dropdown" href="#">Showing Pi</button>
+      <div class="dropdown-menu" style="z-index: 99">
+        <a class="dropdown-item" href="#">Pi1</a>
+        <a class="dropdown-item" href="#">Pi2</a>
+        <a class="dropdown-item" href="#">Pi3</a>
+        <a class="dropdown-item" href="#">Pi4</a>
+      </div>
+    </div>
+
+  <!-- The chart -->
+     
     <div class="wrapper">
+      <div class="navbar buttons">
+        <button class="button navbar-item button">Power Usage</button>
+        <button class="button navbar-item button">CPU Usage</button>
+        <button class="button navbar-item button">Memory Usage</button>
+      </div>
       <div id="chart"></div>
-      <!-- <script>
+      <script>
+        var i = 0;
           function getData() {
+            if(i<300)
+            {
+              i++;
               return Math.random();
+            }
+            else
+              window.clearInterval(getData);
           }
           Plotly.plot('chart',[{
               y:[getData()],
@@ -119,10 +126,42 @@
                   });
               }
           },15);
-    </script> -->
+      </script>
     </div>
   </div>
 </section>
 
 </body>
 </html>
+
+<!-- Dropdown -->
+<!-- <div class="dropdown is-active">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+      <span>Dropdown button</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+    <div class="dropdown-content">
+      <a href="#" class="dropdown-item">
+        Dropdown item
+      </a>
+      <a class="dropdown-item">
+        Other dropdown item
+      </a>
+      <a href="#" class="dropdown-item is-active">
+        Active dropdown item
+      </a>
+      <a href="#" class="dropdown-item">
+        Other dropdown item
+      </a>
+      <hr class="dropdown-divider">
+      <a href="#" class="dropdown-item">
+        With a divider
+      </a>
+    </div>
+  </div>
+</div> -->
