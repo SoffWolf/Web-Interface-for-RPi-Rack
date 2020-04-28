@@ -14,7 +14,7 @@
 
     <!-- Bootstrap CSS
 		============================================ -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
 	<!-- nalika Icon CSS
 		============================================ -->
     <link rel="stylesheet" href="css/nalika-icon.css">
@@ -74,9 +74,11 @@
 	</div>
 </section>
 
-<!-- Control/Info Buttons -->
+<!-- Control/Info/Buttons -->
 <section class="section">
   <div class="container">
+
+    <!-- Pi Selection -->
     <div class="buttons">
       <button class="button is-primary is-outlined" href="#">All</a>
       <button class="nav-link dropdown-toggle button is-primary is-outlined" data-toggle="dropdown" href="#">Showing Pi</button>
@@ -88,16 +90,19 @@
       </div>
     </div>
 
-  <!-- The chart -->
-     
+    <!-- Utility Records -->
+    <div class="navbar buttons">
+      <button class="button navbar-item button">CPU Usage</button>
+      <button class="button navbar-item button">Memory Usage</button>
+      <button class="button navbar-item button">GPU Usage</button>        
+      <button class="button navbar-item button">Fan Speed</button>
+      <button class="button navbar-item button">Power Usage</button>
+    </div>
+  
+    <!-- The chart -->  
     <div class="wrapper">
-      <div class="navbar buttons">
-        <button class="button navbar-item button">Power Usage</button>
-        <button class="button navbar-item button">CPU Usage</button>
-        <button class="button navbar-item button">Memory Usage</button>
-      </div>
       <div id="chart"></div>
-      <script>
+      <!-- <script>
         var i = 0;
           function getData() {
             if(i<300)
@@ -126,7 +131,7 @@
                   });
               }
           },15);
-      </script>
+      </script> -->
     </div>
   </div>
 </section>
