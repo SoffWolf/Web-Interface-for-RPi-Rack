@@ -65,13 +65,13 @@
 <body>
 <!--Navigation pills-->
 <section class="hero">
-	<div class="hero-body d-flex justify-content-center">
-		<div class="btn-group btn-group-md">
-      <a href="Control1.html" class="btn btn-success">Control</a>               <!--Insert link of the other page-->
-      <a href="Overview1.html" class="btn btn-success">Overview</a>
-      <a href="#" class="btn btn-success">Details</a>
+  <div class="hero-body d-flex justify-content-center">
+    <div class="btn-group btn-group-md">
+      <a href="Control1.html" class="btn btn-success">Cluster</a>               <!--Insert link of the other page-->
+      <a href="Overview1.html" class="btn btn-success">Compute</a>
+      <!-- <a href="Details1.html" class="btn btn-success">Details</a> -->
     </div>
-	</div>
+  </div>
 </section>
 
 <!-- Control/Info/Buttons -->
@@ -102,7 +102,7 @@
     <!-- The chart -->  
     <div class="wrapper">
       <div id="chart"></div>
-      <!-- <script>
+      <script>
         var i = 0;
           function getData() {
             if(i<300)
@@ -113,6 +113,7 @@
             else
               window.clearInterval(getData);
           }
+          
           Plotly.plot('chart',[{
               y:[getData()],
               type:'line'
@@ -131,7 +132,7 @@
                   });
               }
           },15);
-      </script> -->
+      </script>
     </div>
   </div>
 </section>
